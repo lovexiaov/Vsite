@@ -6,12 +6,10 @@ __author__ = 'lovexiaov'
 
 import os.path as p
 import configparser as parser
-from common.util import *
+from common.const import PROJECT_ABSPATH
 
 conf_path = p.join(p.dirname(p.realpath(__file__)), r'cfg.ini')
 
-
-# print(conf_path)
 
 class Config(object):
     def __init__(self):
@@ -23,6 +21,9 @@ class Config(object):
         :return: 数据库基于项目根目录的相对路径
         """
         return p.join(PROJECT_ABSPATH, self._get('city', 'db_path'))
+
+    def getWeatherCNUrl(self):
+        return self._get('cnweather', 'weather')
 
     def _get(self, category, key):
         return self.parser.get(category, key)

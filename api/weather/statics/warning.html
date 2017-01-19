@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+   <meta content="中国天气,中国天气通" name="Keywords"/>
+   <meta content="中国天气，为您提供专业的气象服务。" name="Description"/>
+   <meta content="width=device-width,initial-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <title>
+     首页
+    </title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+     <link href="css/global.css" rel="stylesheet" type="text/css">
+      <link href="css/index.css" rel="stylesheet" type="text/css">
+       <script src="js/jquery-1.11.3.min.js" type="text/javascript">
+       </script>
+       <script src="js/zepto.min.js" type="text/javascript">
+       </script>
+       <script src="js/zepto.touch.js" type="text/javascript">
+       </script>
+       <script src="js/zepto.fx.js" type="text/javascript">
+       </script>
+       <script src="js/zepto.selector.js" type="text/javascript">
+       </script>
+       <script src="js/global.js" type="text/javascript">
+       </script>
+       <script src="js/index.js" type="text/javascript">
+       </script>
+       <script src="js/res.js?version=20160628" type="text/javascript">
+       </script>
+       <script type="text/javascript">
+        var _vds = _vds || [];
+      window._vds = _vds;
+      (function(){
+        _vds.push(['setAccountId', '815b5c6b67d711b4']);
+        (function() {
+          var vds = document.createElement('script');
+          vds.type='text/javascript';
+          vds.async = true;
+          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(vds, s);
+        })();
+      })();
+       </script>
+      </link>
+     </link>
+    </link>
+   </meta>
+  </meta>
+ </head>
+ <body>
+  <div class="page-container">
+   <header>
+    <img alt="top-banner" class="top-banner" src="">
+     <div class="logo-info clearfix">
+      <span>
+       <a href="citychange.jsp?partner=">
+        更换城市
+       </a>
+      </span>
+      <span>
+       聊城
+      </span>
+      <span>
+       <i>
+       </i>
+      </span>
+     </div>
+     <ul class="earlywarning">
+      <li>
+       <a href="alert.do?id=37150041600000_20170119160713&amp;partner=">
+        <img src="/images/warning/icon_warning_0501.png">
+         聊城市发布大风蓝色预警
+        </img>
+       </a>
+      </li>
+     </ul>
+     <div class="header-info">
+      <div class="curdate">
+       <span class="date">
+        01月19日
+       </span>
+       <span class="weekday">
+        星期四
+       </span>
+       <span class="solarTerm">
+        农历腊月廿二
+       </span>
+      </div>
+      <div class="curtime">
+       <span>
+        22:30
+       </span>
+       <span>
+        发布
+       </span>
+      </div>
+      <div class="current-weather">
+       <a href="todayweather.do?id=101121701&amp;partner=">
+        <i class="icon">
+         <img src="/images/big/day/icon_weather_01_big.png"/>
+        </i>
+        <span class="cur-temp">
+         -2
+         <sup>
+          ℃
+         </sup>
+        </span>
+        <span class="temperature">
+         夜间最低温度 -10℃
+        </span>
+        <span class="description">
+         多云
+        </span>
+       </a>
+       <div class="aqi aqi-bgcolor-1" value="73">
+        <a href="aqi.do?id=101121701&amp;partner=">
+         73 良
+        </a>
+       </div>
+      </div>
+     </div>
+     <!--<div style="border:3px solid #d7f2fe">
+			<a href="cyds.html" ><img src="images/cydsindex.jpg" /></a>
+		</div>-->
+     <div class="nav-menu clearfix">
+      <div class="left">
+       <a href="eachhours.do?id=101121701&amp;partner=">
+        逐小时预报
+       </a>
+      </div>
+      <div class="right">
+       <a href="15d.do?id=101121701&amp;partner=">
+        15天预报
+       </a>
+      </div>
+     </div>
+    </img>
+   </header>
+   <div class="main-body">
+    <table class="sevendays">
+     <tr>
+      <td class="date">
+       星期四(01/19)
+      </td>
+      <td class="icon-day">
+      </td>
+      <td class="icon-night">
+       <img src="/images/small/night/Night01.png">
+       </img>
+      </td>
+      <td class="temp">
+       -10℃
+      </td>
+      <td class="desc">
+       多云
+      </td>
+     </tr>
+     <tr>
+      <td class="date">
+       星期五(01/20)
+      </td>
+      <td class="icon-day">
+       <img src="/images/small/day/Day00.png"/>
+      </td>
+      <td class="icon-night">
+       <img src="/images/small/night/Night00.png">
+       </img>
+      </td>
+      <td class="temp">
+       2/-8℃
+      </td>
+      <td class="desc">
+       晴
+      </td>
+     </tr>
+     <tr>
+      <td class="date">
+       星期六(01/21)
+      </td>
+      <td class="icon-day">
+       <img src="/images/small/day/Day00.png"/>
+      </td>
+      <td class="icon-night">
+       <img src="/images/small/night/Night00.png">
+       </img>
+      </td>
+      <td class="temp">
+       4/-9℃
+      </td>
+      <td class="desc">
+       晴
+      </td>
+     </tr>
+     <tr>
+      <td class="date">
+       星期天(01/22)
+      </td>
+      <td class="icon-day">
+       <img src="/images/small/day/Day00.png"/>
+      </td>
+      <td class="icon-night">
+       <img src="/images/small/night/Night00.png">
+       </img>
+      </td>
+      <td class="temp">
+       3/-7℃
+      </td>
+      <td class="desc">
+       晴
+      </td>
+     </tr>
+     <tr>
+      <td class="date">
+       星期一(01/23)
+      </td>
+      <td class="icon-day">
+       <img src="/images/small/day/Day00.png"/>
+      </td>
+      <td class="icon-night">
+       <img src="/images/small/night/Night00.png">
+       </img>
+      </td>
+      <td class="temp">
+       5/-4℃
+      </td>
+      <td class="desc">
+       晴
+      </td>
+     </tr>
+     <tr>
+      <td class="date">
+       星期二(01/24)
+      </td>
+      <td class="icon-day">
+       <img src="/images/small/day/Day00.png"/>
+      </td>
+      <td class="icon-night">
+       <img src="/images/small/night/Night01.png">
+       </img>
+      </td>
+      <td class="temp">
+       7/-2℃
+      </td>
+      <td class="desc">
+       晴转多云
+      </td>
+     </tr>
+     <tr>
+      <td class="date">
+       星期三(01/25)
+      </td>
+      <td class="icon-day">
+       <img src="/images/small/day/Day01.png"/>
+      </td>
+      <td class="icon-night">
+       <img src="/images/small/night/Night01.png">
+       </img>
+      </td>
+      <td class="temp">
+       7/-4℃
+      </td>
+      <td class="desc">
+       多云
+      </td>
+     </tr>
+    </table>
+    <div class="quick-link-list">
+     <ul class="clearfix">
+      <li>
+       <img alt="1" src="images/link1.png">
+       </img>
+      </li>
+      <li>
+       <img alt="2" src="images/link2.png">
+       </img>
+      </li>
+      <li>
+       <img alt="3" src="images/link3.png">
+       </img>
+      </li>
+      <li>
+       <img alt="4" src="images/link4.png">
+       </img>
+      </li>
+      <li>
+       <img alt="5" src="images/link5.png">
+       </img>
+      </li>
+      <li>
+       <img alt="6" src="images/link6.png">
+       </img>
+      </li>
+      <li>
+       <img alt="7" src="images/link7.png">
+       </img>
+      </li>
+      <li>
+       <img alt="8" src="images/link8.png">
+       </img>
+      </li>
+     </ul>
+    </div>
+    <!-- 2016-08-17 新增活动入口 -->
+    <!--<div class="clearfix">
+<div class="business-link">
+<a href="http://mogujie.cn/2i6uBI"><img src="images/icon-link1.jpg"/></a>
+</div>
+<div class="business-link">
+<a href="http://61.4.184.187/app/ad/5.x/newactivity/olympics/index.html"><img src="images/icon-link2.jpg"/></a>
+</div>
+</div>-->
+    <!-- 2016-08-17 新增活动入口 -->
+    <div class="menu-title clearfix">
+     <span class="left">
+      今日指数
+     </span>
+     <span class="right">
+      <a href="livingindex.do?id=101121701&amp;partner=">
+       更多&gt;
+      </a>
+     </span>
+    </div>
+    <div class="living-index">
+     <ul class="clearfix">
+      <li>
+       <div class="left" style="background-image: url('images/livingIcon/hf_indices_gm.png')">
+       </div>
+       <div class="right">
+        <p>
+         极易发
+        </p>
+        <p>
+         感冒指数
+        </p>
+       </div>
+      </li>
+      <li>
+       <div class="left" style="background-image: url('images/livingIcon/hf_indices_xc.png')">
+       </div>
+       <div class="right">
+        <p>
+         较适宜
+        </p>
+        <p>
+         洗车指数
+        </p>
+       </div>
+      </li>
+      <li>
+       <div class="left" style="background-image: url('images/livingIcon/hf_indices_cy.png')">
+       </div>
+       <div class="right">
+        <p>
+         冷
+        </p>
+        <p>
+         穿衣指数
+        </p>
+       </div>
+      </li>
+      <li>
+       <div class="left" style="background-image: url('images/livingIcon/hf_indices_dy.png')">
+       </div>
+       <div class="right">
+        <p>
+         不宜
+        </p>
+        <p>
+         钓鱼指数
+        </p>
+       </div>
+      </li>
+      <li>
+       <div class="left" style="background-image: url('images/livingIcon/hf_indices_zwx.png')">
+       </div>
+       <div class="right">
+        <p>
+         最弱
+        </p>
+        <p>
+         紫外线指数
+        </p>
+       </div>
+      </li>
+      <li>
+       <div class="left" style="background-image: url('images/livingIcon/hf_indices_ssd.png')">
+       </div>
+       <div class="right">
+        <p>
+         较不舒适
+        </p>
+        <p>
+         舒适度指数
+        </p>
+       </div>
+      </li>
+      <li>
+       <div class="left" style="background-image: url('images/livingIcon/hf_indices_yd.png')">
+       </div>
+       <div class="right">
+        <p>
+         较不宜
+        </p>
+        <p>
+         运动指数
+        </p>
+       </div>
+      </li>
+      <li>
+       <div class="left" style="background-image: url('images/livingIcon/hf_indices_ls.png')">
+       </div>
+       <div class="right">
+        <p>
+         基本适宜
+        </p>
+        <p>
+         晾晒指数
+        </p>
+       </div>
+      </li>
+     </ul>
+    </div>
+    <img alt="bottom-banner" class="bottom-banner" src="">
+    </img>
+   </div>
+   <div id="backup">
+   </div>
+   <footer>
+    <ul class="addresslist">
+     <li>
+      <i>
+       <img alt="icon1" src="images/chinaweather.png" title="icon1"/>
+      </i>
+      中国天气通客户端
+     </li>
+     <li>
+      <i>
+       <img alt="icon2" src="images/weixin.png" title="icon2"/>
+      </i>
+      加微信 chinaweather3g
+     </li>
+     <li>
+      <i>
+       <img alt="icon3" src="images/weibo.png" title="icon3"/>
+      </i>
+      微博 @中国天气通
+     </li>
+     <li>
+      <i>
+       <img src="images/mail.png"/>
+      </i>
+      联系我们
+     </li>
+    </ul>
+    <address class="remarks">
+     <p>
+      <span>
+       Copyright©2016 Huafeng-AccuWeather All Rights reserved. 版权所有。 京ICP备16022777号-1
+      </span>
+     </p>
+    </address>
+    <span style="display:none">
+     <script language="javascript" src="http://js.users.51.la/18958112.js" type="text/javascript">
+     </script>
+     <noscript>
+      <a href="http://www.51.la/?18958112" target="_blank">
+       <img alt="我要啦免费统计" src="http://img.users.51.la/18958112.asp" style="border:none"/>
+      </a>
+     </noscript>
+     <!-- GoStats JavaScript Based Code -->
+     <script src="http://gostats.cn/js/counter.js" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      _gos='monster.gostats.cn';_goa=483717;
+_got=5;_goi=1;_gol='图片计数器';_GoStatsRun();
+     </script>
+     <noscript>
+      <a href="http://gostats.cn" target="_blank" title="图片计数器">
+       <img alt="图片计数器" src="http://monster.gostats.cn/bin/count/a_483717/t_5/i_1/counter.png" style="border-width:0"/>
+      </a>
+     </noscript>
+     <!-- End GoStats JavaScript Based Code -->
+     <script type="text/javascript">
+      var _vds = _vds || [];
+      window._vds = _vds;
+      (function(){
+        _vds.push(['setAccountId', 'a2ba36c18bb61ae4']);
+        (function() {
+          var vds = document.createElement('script');
+          vds.type='text/javascript';
+          vds.async = true;
+          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(vds, s);
+        })();
+      })();
+     </script>
+     <script type="text/javascript">
+      var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259267563'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259267563' type='text/javascript'%3E%3C/script%3E"));
+     </script>
+    </span>
+    <script>
+     //声明_czc对象:
+var _czc = _czc || [];
+//绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+_czc.push(["_setAccount", "1259267563"]);
+    </script>
+    <script>
+     var partnerid=getQueryString("partner");
+var partnerid1="";
+if(partnerid=="1000001000"){
+partnerid1=partnerid+"三星";
+}else if(partnerid=="1000001001"){
+	partnerid1=partnerid+"一点资讯";
+}else if(partnerid=="1000001002"){
+	partnerid1=partnerid+"联想PC Widget";
+}else if(partnerid=="1000001003"){
+	partnerid1=partnerid+"努比亚";
+}else if(partnerid=="1000001004"){
+	partnerid1=partnerid+"科大讯飞";
+}else if(partnerid=="1000001005"){
+	partnerid1=partnerid+"CBC";
+}else if(partnerid=="1000001006"){
+	partnerid1=partnerid+"惠锁屏";
+}else if(partnerid=="1000001007"){
+	partnerid1=partnerid+"联想手机";
+}else if(partnerid=="1000001008"){
+	partnerid1=partnerid+"知趣天气";
+}else if(partnerid=="1000001009"){
+	partnerid1=partnerid+"中华万年历";
+}else if(partnerid=="1000001010"){
+	partnerid1=partnerid+"华为手机";
+}else if(partnerid=="1000001011"){
+	partnerid1=partnerid+"步步高教育电子";
+}else if(partnerid=="1000001012"){
+	partnerid1=partnerid+"OPPO手机";
+}else if(partnerid=="1000001013"){
+	partnerid1=partnerid+"恬家管家";
+}else if(partnerid=="1000001014"){
+	partnerid1=partnerid+"遥控精灵";
+}else if(partnerid=="1000001015"){
+	partnerid1=partnerid+"联想手机";
+}else if(partnerid=="1000001016"){
+	partnerid1=partnerid+"中国联通沃门户";
+}else if(partnerid=="1000001017"){
+	partnerid1=partnerid+"百度地图";
+}else if(partnerid=="1000001018"){
+	partnerid1=partnerid+"联想日历";
+}else if(partnerid=="1000001019"){
+	partnerid1=partnerid+"TCL手机";
+}else if(partnerid=="1000001020"){
+	partnerid1=partnerid+"三星S助手";
+}else if(partnerid=="1000001022"){
+	partnerid1=partnerid+"猪八戒";
+}else if(partnerid=="1000001023"){
+	partnerid1=partnerid+"喜马拉雅";
+}else if(partnerid=="1000001024"){
+	partnerid1=partnerid+"OPPO浏览器";
+}else if(partnerid=="1000001025"){
+	partnerid1=partnerid+"万家邦智能生活平台";
+}else if(partnerid=="1000001026"){
+	partnerid1=partnerid+"爱奇艺头条";
+}else if(partnerid=="1000001027"){
+	partnerid1=partnerid+"如意桌面";
+}else if(partnerid=="1000001028"){
+	partnerid1=partnerid+"WP桌面";
+}
+
+_czc.push(["_setCustomVar","访客来源",partnerid1,0]);
+
+$(function(){
+	$("ul.addresslist").on('click', 'li', function(event){
+		var li_index=$(this).index();
+		switch (li_index){
+			case 0:
+				window.location="http://mobile.weathercn.com/Download/index.jsp?partner=";
+				break;
+			// case 1:
+			// 	window.location="http://weixin.qq.com/";
+			// 	break;
+			case 2:
+				window.location="http://weibo.com/u/2319195074?refer_flag=1001030101_";
+				break;
+		}
+	});
+});
+    </script>
+   </footer>
+  </div>
+  <script type="text/javascript">
+   $(function(){
+	init();
+	function init(){
+		    var aqi_value=$(".aqi").attr("value");
+
+			var aqi_value=parseInt(aqi_value);
+
+			var aqi_bgcolor_str="";
+
+			if(aqi_value<50){
+				aqi_bgcolor_str="aqi-bgcolor-1";
+			}else if(aqi_value<100){
+				aqi_bgcolor_str="aqi-bgcolor-2";
+			}else if(aqi_value<150){
+				aqi_bgcolor_str="aqi-bgcolor-3";
+			}else if(aqi_value<200){
+				aqi_bgcolor_str="aqi-bgcolor-4";
+			}else if(aqi_value<300){
+				aqi_bgcolor_str="aqi-bgcolor-5";
+			}else if(aqi_value<500){
+				aqi_bgcolor_str="aqi-bgcolor-6";
+			}else{
+				aqi_bgcolor_str="aqi-bgcolor-6";
+			}
+			$(".aqi").addClass(aqi_bgcolor_str);
+
+
+	}
+})
+  </script>
+  <!-- start Mixpanel -->
+  <script type="text/javascript">
+   (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("ead5b8a5705e69872364fdb387c182c2");
+  </script>
+  <!-- end Mixpanel -->
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81631604-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script>
+   var _hmt = _hmt || [];                              _hmt.push(['_setCustomVar', 1, "访客来源", partnerid1]);
+
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9464fdbe23f521332c2e900f4779524b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+  </script>
+  <script charset="UTF-8" src="http://tajs.qq.com/stats?sId=58080586" type="text/javascript">
+  </script>
+ </body>
+</html>
