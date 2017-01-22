@@ -16,7 +16,25 @@ class Transmitter(object):
         :param count: 列出的个数, 默认值为 -1,即列出所有省份名称
         :return: 省份名称列表
         """
-        sql = u'SELECT name FROM province LIMIT %s;' % count
+        sql = u'''SELECT name
+                  FROM province
+                  LIMIT {};
+                  '''.format(count)
+        cursor = self._query(sql)
+        return map(lambda x: x[0], cursor.fetchall())
+
+    def listCity(self, province, count=-1):
+        """
+        列出指定省份的城市列表
+        :param province: 省份
+        :param count: 列出多少个，默认列出全部
+        :return: 指定省份的城市列表
+        """
+        sql = u'''SELECT c.name
+                  FROM province p, city c
+                  WHERE p.name="{}" AND c.prov_id=p._id
+                  LIMIT {};
+                  '''.format(province, count)
         cursor = self._query(sql)
         return map(lambda x: x[0], cursor.fetchall())
 
@@ -32,7 +50,8 @@ class Transmitter(object):
                     d.name,
                     d.code
                   FROM province p, city c, district d
-                  WHERE d.name = "{}" AND c._id = d.city_id AND p._id = c.prov_id;'''.format(name)
+                  WHERE d.name = "{}" AND c._id = d.city_id AND p._id = c.prov_id;
+                  '''.format(name)
 
         return list(self._query(sql).fetchall())
 
@@ -56,7 +75,10 @@ if __name__ == '__main__':
     #     # print(type(prov))
     #     print(prov)
 
-    # trans.listCity(1)
+    # cities = trans.listCity('山东', 3)
+    # for city in cities:
+    #     print(city)
+
     # trans.listDistrict(1)
 
     for cityinfo in trans.cityCode("朝阳"):
