@@ -1,5 +1,8 @@
 # coding: utf-8
+import os, sys
 
+sys.path.append('/root/coding/Vsite')
+print(sys.path)
 import json
 
 from flask import Flask, request
@@ -29,4 +32,4 @@ def result(content, msg='Success', code=200):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')

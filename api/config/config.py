@@ -6,7 +6,7 @@ __author__ = 'lovexiaov'
 
 import os.path as p
 import configparser as parser
-from common.const import PROJECT_ABSPATH
+from api.common.const import PROJECT_ABSPATH
 
 conf_path = p.join(p.dirname(p.realpath(__file__)), r'cfg.ini')
 

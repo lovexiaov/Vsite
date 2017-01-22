@@ -4,8 +4,8 @@ This module is designed for parse the weather data
 """
 import requests
 from bs4 import BeautifulSoup, Tag
-from city.main import Transmitter
-from config.config import Config
+from api.city.main import Transmitter
+from api.config.config import Config
 
 import json
 

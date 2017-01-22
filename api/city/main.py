@@ -2,7 +2,7 @@
 __author__ = 'lovexiaov'
 
 import sqlite3
-from config.config import Config
+from api.config.config import Config
 
 config = Config()
 
