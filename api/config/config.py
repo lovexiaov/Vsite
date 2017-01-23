@@ -6,6 +6,7 @@ __author__ = 'lovexiaov'
 
 import os.path as p
 import configparser as parser
+from urllib.parse import urljoin  # Python 2 中应为 from urlparse import urljoin
 from api.common.const import PROJECT_ABSPATH
 
 conf_path = p.join(p.dirname(p.realpath(__file__)), r'cfg.ini')
@@ -22,8 +23,11 @@ class Config(object):
         """
         return p.join(PROJECT_ABSPATH, self._get('city', 'db_path'))
 
+    def getWeatherHost(self):
+        return self._get('cnweather', 'host')
+
     def getWeatherCNUrl(self):
-        return self._get('cnweather', 'weather')
+        return urljoin(self.getWeatherHost(), self._get('cnweather', 'weather'))
 
     def _get(self, category, key):
         return self.parser.get(category, key)
