@@ -2,7 +2,7 @@
 import os, sys
 
 sys.path.append('/root/coding/Vsite')
-print(sys.path)
+# print(sys.path)
 import json
 
 from flask import Flask, request
@@ -24,10 +24,17 @@ def hello():
         api = WeatherAPI()
         return result(api.getWeather(city))
     else:
-        return result('', 'MUST HAVE param `city` not found.', 404)
+        return result('', 'MUST HAVE param `city` not found.', 601)
 
 
 def result(content, msg='Success', code=200):
+    """
+    将需要返回的信息组合成 json 字符串，并返回。
+    :param content: 返回客户端的内容(str)
+    :param msg: 状态消息(str)
+    :param code: 状态码(int)
+    :return: json 格式的字符串
+    """
     return json.dumps({'code': code, 'msg': msg, 'content': content}, ensure_ascii=False)
 
 

@@ -58,7 +58,7 @@ class WeatherAPI:
             # print(''.join(temp.split()))
             # print(''.join(desc.split()))
             # print(u'=================')
-        return json.dumps(data)
+        return data
 
     @staticmethod
     def _parse(html):
