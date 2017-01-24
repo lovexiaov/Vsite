@@ -51,13 +51,17 @@ class WeatherAPI:
         soup = BeautifulSoup(html, u'html.parser')
         # print(soup.prettify())
 
-        name = group(soup.find(u'div', class_=u'logo-info').getText().split())
+        # ==========城市名称
+        name = group(soup.find(u'div', class_=u'logo-info').text.split())
         result['city'] = name.replace('更换城市', '')
 
-        div_current = soup.find(u'div', class_=u'header-info')
+        # ==========预警信息
+        ul_warning = soup.find(u'ul', class_=u'earlywarning')
+        result['warning'] = ul_warning.text.split() if ul_warning else []
 
+        div_current = soup.find(u'div', class_=u'header-info')
         # ==========当前日期信息
-        ptime = div_current.find(u'div', class_=u'curtime').get_text().split()[0]
+        ptime = div_current.find(u'div', class_=u'curtime').text.split()[0]
 
         div_curdate = div_current.find(u'div', class_=u'curdate')
         curdate = div_curdate.get_text().split()
