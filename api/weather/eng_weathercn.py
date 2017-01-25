@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup, Tag
 from api.city.main import Transmitter
 from api.config.config import Config
 from api.common.util import group
+from api.common.const import headers
 
 
 class WeatherAPI:
@@ -33,7 +34,7 @@ class WeatherAPI:
 
         data = {u'id': code}
 
-        response = self.session.post(self.config.getWeatherCNUrl(), data=data)
+        response = self.session.post(self.config.getWeatherCNUrl(), data=data, headers=headers)
         # TODO 校验是否成功请求
         return self._parse(response.content)
 
@@ -68,7 +69,7 @@ class WeatherAPI:
 
         result['date'] = curdate[0]
         result['weekday'] = curdate[1]
-        result['lunar'] = curdate[2]
+        result['lunar'] = curdate[2][2:]
         result['ptime'] = ptime
 
         # ==========当前天气信息
@@ -77,13 +78,19 @@ class WeatherAPI:
         curtemp = group(div_curweather.find(u'span', class_=u'cur-temp').text.split())
         tempscope = group(div_curweather.find(u'span', class_=u'temperature').text.split())
         desc = group(div_curweather.find(u'span', class_=u'description').text.split())
-        aqi = div_curweather.find(u'div', class_=u'aqi').text.split()
 
         result['curtemp'] = curtemp
         result['temp'] = tempscope
         result['desc'] = desc
-        result['aqi'] = aqi[0]
-        result['aqilevel'] = aqi[1]
+
+        div_aqi = div_curweather.find(u'div', class_=u'aqi')
+        if div_aqi:
+            aqi = div_aqi.text.split()
+            result['aqi'] = aqi[0]
+            result['aqilevel'] = aqi[1]
+        else:
+            result['aqi'] = ''
+            result['aqilevel'] = ''
 
         # ==========7日天气预报
         table_7days = soup.find(u'table', class_=u'sevendays')

@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 
 @app.route(u'/weather')
-def hello():
+def weather():
     """
     接受 GET 请求，city=[城市名]
     :return: 指定城市的天气数据（json）
